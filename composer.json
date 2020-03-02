@@ -1,0 +1,29 @@
+{
+    "name": "hron84/hron.me",
+    "description": "Hron.me Website",
+    "type": "project",
+    "license": "CC-BY-NC-SA",
+    "authors": [
+        {
+            "name": "Gabor Garami",
+            "email": "hron@hron.me"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "prefer-dist": true,
+    "autoload": {
+        "psr-4": {
+            "Portfolio\\": "."
+        }
+    },
+    "require": {
+        "smarty/smarty": "^3.1",
+        "nikic/fast-route": "^1.3",
+        "symfony/dotenv": "^5.0",
+        "php-di/php-di": "^6.0",
+        "psr/log": "^1.1",
+        "monolog/monolog": "^2.0",
+        "doctrine/annotations": "^1.8"
+    }
+}

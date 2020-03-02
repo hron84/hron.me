@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b101ce31-f6c8-4b56-bd06-b8d460eda968" name="Moonshine" url="http://moonshine.hron.me">
+        <fileTransfer host="moonshine.hron.me" port="21" rootFolder="/dev.hron.me/htdocs">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

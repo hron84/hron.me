@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="edcb6743-34d2-4b39-aec3-5c907fae56fa" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <phar pharPath="D:\progs\php-7.3\composer.phar" />
+    </execution>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/nikic/fast-route" />
+      <path value="$PROJECT_DIR$/vendor/smarty/smarty" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/php-di/invoker" />
+      <path value="$PROJECT_DIR$/vendor/php-di/php-di" />
+      <path value="$PROJECT_DIR$/vendor/php-di/phpdoc-reader" />
+      <path value="$PROJECT_DIR$/vendor/jeremeamia/superclosure" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1XifcN8AG0BGMytv2mxxCkjcAwW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="edcb6743-34d2-4b39-aec3-5c907fae56fa" name="Default Changelist" comment="" />
+      <created>1581533913325</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581533913325</updated>
+      <workItem from="1581533914582" duration="1107000" />
+      <workItem from="1581535037094" duration="3645000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="238" key="#Composer" timestamp="1581533925620">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="552" y="238" key="#Composer/0.0.1920.1160/1920.0.1920.1160/-768.0.768.1326@0.0.1920.1160" timestamp="1581533925620" />
+    <state x="552" y="238" key="#Deployment" timestamp="1581538684255">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="552" y="238" key="#Deployment/0.0.1920.1160/1920.0.1920.1160/-768.0.768.1326@0.0.1920.1160" timestamp="1581538684255" />
+    <state x="718" y="382" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581536917418">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="718" y="382" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1160/1920.0.1920.1160/-768.0.768.1326@0.0.1920.1160" timestamp="1581536917418" />
+    <state x="736" y="463" width="447" height="264" key="ComposerInitDialogKey" timestamp="1581534261908">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="736" y="463" width="447" height="264" key="ComposerInitDialogKey/0.0.1920.1160/1920.0.1920.1160/-768.0.768.1326@0.0.1920.1160" timestamp="1581534261908" />
+    <state x="739" y="336" key="FileChooserDialogImpl" timestamp="1581538551907">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="739" y="336" key="FileChooserDialogImpl/0.0.1920.1160/1920.0.1920.1160/-768.0.768.1326@0.0.1920.1160" timestamp="1581538551907" />
+    <state x="748" y="394" key="NewPhpClassDialog" timestamp="1581534817206">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="748" y="394" key="NewPhpClassDialog/0.0.1920.1160/1920.0.1920.1160/-768.0.768.1326@0.0.1920.1160" timestamp="1581534817206" />
+    <state x="794" y="503" key="NewPhpFileDialog" timestamp="1581536097863">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="794" y="503" key="NewPhpFileDialog/0.0.1920.1160/1920.0.1920.1160/-768.0.768.1326@0.0.1920.1160" timestamp="1581536097863" />
+    <state x="461" y="222" key="SettingsEditor" timestamp="1581535454408">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="461" y="222" key="SettingsEditor/0.0.1920.1160/1920.0.1920.1160/-768.0.768.1326@0.0.1920.1160" timestamp="1581535454408" />
+    <state x="764" y="310" key="ftp.server.browser" timestamp="1581538570967">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="764" y="310" key="ftp.server.browser/0.0.1920.1160/1920.0.1920.1160/-768.0.768.1326@0.0.1920.1160" timestamp="1581538570967" />
+  </component>
+</project>
