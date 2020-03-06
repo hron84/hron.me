@@ -32,7 +32,11 @@ abstract class BaseController {
     $this->smarty = $smarty;
     $this->logger = $logger;
     $this->container = $container;
+    
+    $this->initController();
   }
+
+  protected function initController() {}
 
   /**
    * Renders the specified template with the binding

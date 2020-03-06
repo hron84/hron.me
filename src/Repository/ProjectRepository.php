@@ -2,18 +2,26 @@
 
 namespace Portfolio\Repository;
 
+use \Portfolio\Model\Project;
+
 class ProjectRepository {
   /**
    * @var PDO
    */
   protected $pdo;
 
+  /**
+   * @var \Psr\Log\LoggerInterface
+   */
+  protected $logger;
+
   protected static $tableName = 'projects';
 
   protected static $primaryKey = 'id';
 
-  public function __construct(\PDO $pdo) {
+  public function __construct(\PDO $pdo, \Psr\Log\LoggerInterface $logger) {
     $this->pdo = $pdo;
+    $this->logger = $logger;
   }
 
   public function find($id) {
@@ -22,14 +30,20 @@ class ProjectRepository {
     return $stmt->fetch(\PDO::FETCH_ASSOC);
   }
 
-  public function findAll($offset, $size) {
+  public function findAll($offset = 0, $size = 25) {
     $query = "SELECT * FROM " . self::$tableName . " LIMIT {$size} OFFSET {$offset}";
+    $this->logger->debug('Query: ' . $query);
     $stmt = $this->query($query);
-    return $this->mapAll($stmt->fetchAll(\PDO::FETCH_ASSOC));
+    $result = $stmt->fetchAll();
+    //print_r($result);
+    return $this->mapAll($result);
   }
 
-  protected function query($query, $variables) {
-    $stmt = $this->pdo->prepare($sql);
+  protected function query($query, $variables = null) {
+    if(is_null($variables)) {
+      $variables = [];
+    }
+    $stmt = $this->pdo->prepare($query);
     $stmt->execute($variables);
     return $stmt;
   }

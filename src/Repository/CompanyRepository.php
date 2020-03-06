@@ -2,6 +2,8 @@
 
 namespace Portfolio\Repository;
 
+use \Portfolio\Model\Company;
+
 class CompanyRepository {
   /**
    * @var PDO
@@ -28,8 +30,12 @@ class CompanyRepository {
     return $this->mapAll($stmt->fetchAll(\PDO::FETCH_ASSOC));
   }
 
-  protected function query($query, $variables) {
-    $stmt = $this->pdo->prepare($sql);
+  protected function query($query, $variables = null) {
+    if(is_null($variables)) {
+      $variables = [];
+    }
+
+    $stmt = $this->pdo->prepare($query);
     $stmt->execute($variables);
     return $stmt;
   }

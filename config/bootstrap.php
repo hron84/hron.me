@@ -14,7 +14,7 @@ ini_set('display_errors', true);
 error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED);
 
 $dotenv = new Dotenv();
-$dotenv->load(APP_DIR . '/.env');
+$dotenv->loadEnv(APP_DIR . '/.env');
 
 if(!function_exists('dump')) {
     function dump($mixed) {

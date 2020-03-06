@@ -1,2 +1,6 @@
-tmp
-log
+/tmp
+!/tmp/.gitkeep
+/log
+!/log/.gitkeep
+/.env*
+!/.env.dist

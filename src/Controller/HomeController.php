@@ -19,25 +19,20 @@ class HomeController extends BaseController {
    */ 
   private $companyRepository;
 
-
-
-  public function __construct(
-    ProjectRepository $projectRepository, 
-    CompanyRepository $companyRepository) {
-    $this->projectRepository = $projectRepository;
-    $this->companyRepository = $companyRepository;
+  protected function initController() {
+    // print "LOFASZ";
+    $this->companyRepository = $this->container->get(CompanyRepository::class);
+    $this->projectRepository = $this->container->get(ProjectRepository::class);
   }
 
-    public function index() {
-      print_r($this); return;
-      //$this->smarty->display('index.tpl');
-      $this->render('index.tpl');
-      /*
-      $this->render('index.tpl', null, function() {
-        $companies = $this->companyRepository->findAll();
-        $projects = $this->projectRepository->findAll();
-
-        return ['projects' => $projects, 'companies' => $companies];
-      });*/
-    }
+  public function index() {
+    //$this->smarty->display('index.tpl');
+    // $this->render('index.tpl');
+    $this->render('index.tpl', null, function() {
+      $companies = $this->companyRepository->findAll();
+      $projects = $this->projectRepository->findAll();
+      //print_r($projects);
+      return ['projects' => $projects, 'companies' => $companies];
+    });
+  }
 }

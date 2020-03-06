@@ -2,7 +2,7 @@
 
 namespace Portfolio\Model;
 
-class BaseModel implements ArrayAccess {
+abstract class BaseModel implements \ArrayAccess {
   private $_internal = [];
 
   protected $attributes = [];
@@ -25,6 +25,12 @@ class BaseModel implements ArrayAccess {
   public function offsetGet($attr) {
     if($this->offsetExists($attr)) {
       return $this->_internal[$attr];
+    }
+  }
+
+  public function offsetUnset($attr) {
+    if($this->attrAllowed($attr) && $this->offsetExists($attr)) {
+      unset($this->_internal[$attr]);
     }
   }
 
