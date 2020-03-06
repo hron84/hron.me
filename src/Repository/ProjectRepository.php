@@ -25,12 +25,21 @@ class ProjectRepository {
   public function findAll($offset, $size) {
     $query = "SELECT * FROM " . self::$tableName . " LIMIT {$size} OFFSET {$offset}";
     $stmt = $this->query($query);
-    return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    return $this->mapAll($stmt->fetchAll(\PDO::FETCH_ASSOC));
   }
 
   protected function query($query, $variables) {
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute($variables);
     return $stmt;
+  }
+
+  private function mapAll($result) {
+    $collection = [];
+    foreach($result as $row) {
+      $collection[] = new Project($row);
+    }
+
+    return $collection;
   }
 }

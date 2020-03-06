@@ -10,6 +10,7 @@ class ComposerStaticInit572a41cb2b3d84dfff96749e06fa9fd8
         'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         'b33e3d135e5d9e47d845c576147bda89' => __DIR__ . '/..' . '/php-di/php-di/src/functions.php',
+        '67498b654a4c17ecbaef6fbf8174dd67' => __DIR__ . '/../..' . '/src/utils.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -75,7 +76,7 @@ class ComposerStaticInit572a41cb2b3d84dfff96749e06fa9fd8
         ),
         'Portfolio\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/',
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'PhpParser\\' => 
         array (

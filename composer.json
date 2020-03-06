@@ -14,8 +14,12 @@
     "prefer-dist": true,
     "autoload": {
         "psr-4": {
-            "Portfolio\\": "."
-        }
+            "Portfolio\\": "src/"
+        },
+        "files": [
+            "src/utils.php"
+        ]
+
     },
     "require": {
         "smarty/smarty": "^3.1",

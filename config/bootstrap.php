@@ -46,7 +46,7 @@ $cb->ignorePhpDocErrors($_ENV['APP_ENV'] == 'production');
 
 if($_ENV['APP_ENV'] == 'production') {
     mkdir(TMP_DIR . DIRECTORY_SEPARATOR . 'di');
-    $cb->enableCompilation(TMP_DIR . DIRECTORY_SEPARATOR . 'di');
+    // $cb->enableCompilation(TMP_DIR . DIRECTORY_SEPARATOR . 'di');
 }
 
 

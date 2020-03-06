@@ -10,16 +10,16 @@ use function \DI\get;
 use function \DI\factory;
 use function \DI\autowire;
 
+// function path_join(...$elements) {
+//   return implode(DIRECTORY_SEPARATOR, $elements);
+// }
+
 function config_fallback($value, $fallback) {
     if (!isset($value) || is_null($value) || emopty($value) || (is_numeric($value) && $value === 0)) {
         return $fallback;
     } else {
         return $value;
     }
-}
-
-function path_join(...$elements) {
-    return implode(DIRECTORY_SEPARATOR, $elements);
 }
 
 return array(
@@ -43,12 +43,12 @@ return array(
     // Instantiating various stuffs                        //
     /////////////////////////////////////////////////////////
 
-    StreamHandler::class => autowire('Monolog\Handler\RotatingFileHandler')
+    \Monolog\Handler\StreamHandler::class => autowire('Monolog\Handler\RotatingFileHandler')
         ->constructorParameter('filename', get('app.log.file'))
         ->constructorParameter('maxFiles', get('app.log.max_files'))
         ->constructorParameter('level', get('app.log.level')),
 
-    Psr\Log\LoggerInterface::class => factory(function (ContainerInterface $c) {
+    \Psr\Log\LoggerInterface::class => factory(function (ContainerInterface $c) {
         $logger = new Logger(APP_NAME);
 
         $handler = $c->get(StreamHandler::class);
@@ -63,12 +63,12 @@ return array(
     }),
 
     
-    \Smarty::class => function (ContainerInterface $c) {
+    \Smarty::class => factory(function (ContainerInterface $c) {
         $smarty = new Smarty();
 
         $smarty->setCacheDir(path_join(TMP_DIR, 'smarty', 'cache'));
         $smarty->setCompileDir(path_join(TMP_DIR, 'smarty', 'templates_c'));
-        $smarty->setTemplateDir(path_join(APP_DIR, 'views'));
+        $smarty->setTemplateDir(path_join(APP_DIR, 'src/views'));
         $smarty->addPluginsDir(path_join(APP_DIR, 'views', 'plugins'));
 
         if ($_ENV['APP_ENV'] == 'development') {
@@ -82,7 +82,7 @@ return array(
             $smarty->setCacheLifetime($c->get('cache.max_lifetime'));
         }
         return $smarty;
-    },
+    }),
 
     \PDO::class => function (ContainerInterface $c) {
       // TODO extract it to a driver-specific connection builder
@@ -124,7 +124,9 @@ return array(
       }
       $c->get('logger')->debug("PDO DSN: {$dsn}, user: {$user}");
 
-      $pdo = new \PDO($dsn, $user, $pass); 
+      $pdo = new \PDO($dsn, $user, $pass);
+
+      return $pdo;
     },
 
     /////////////////////////////////////////////////////////
