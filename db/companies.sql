@@ -1,4 +1,4 @@
-REATE TABLE `companies` (
+CREATE TABLE `companies` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255),
   `year_begin` int(11) NOT NULL DEFAULT '0',
