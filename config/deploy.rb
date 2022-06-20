@@ -25,6 +25,7 @@ set :branch, ENV['CI_BUILD_REF'] || 'master'
 
 # Default value for :linked_files is []
 # append :linked_files, 'web/sites/default/settings.php', 'web/sites/default/services.yml'
+append :linked_files, '.env', ".env.#{fetch(:stage)}"
 
 # Default value for linked_dirs is []
 # append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
