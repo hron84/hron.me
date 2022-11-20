@@ -4,4 +4,5 @@
 !/log/.gitkeep
 /.env*
 !/.env.dist
-!/vendor
+/vendor/*
+!/vendor/.gitkeep
