@@ -9,7 +9,8 @@
             <a rel="me" href="https://linkedin.com/in/garamigabor/" title="LinkedIn profil" class="text-white" target="_blank"><i class="fab fa-linkedin-in"></i></a>&nbsp;
             <a rel="me" href="https://stackoverflow.com/users/182474/gabor-garami" title="StackOverflow profil" class="text-white" target="_blank"><i class="fab fa-stack-overflow"></i></a>&nbsp;
             <a rel="me" href="https://twitter.com/hron84" title="Twitter feed" class="text-white" target="_blank"><i class="fab fa-twitter"></i></a>&nbsp;
-            <a rel="me" href="https://techhub.social/@hron84"><i class="fas fa-elephant"></i></a>
+            <a rel="me" href="https://techhub.social/@hron84" title="Mastodon feed" class="text-white" target="_blank"><i class="fab fa-mastodon"></i></a>
+
         </p>
     </div>
 </section>

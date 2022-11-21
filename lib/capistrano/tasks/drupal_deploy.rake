@@ -7,12 +7,14 @@ end
 def composer_auth
   compjson = File.expand_path('../../../composer.json', File.dirname(__FILE__))
   composer = JSON.load File.read(compjson)
-  composer['repositories'].collect { |e| e['url'] }.each do |u|
-    if u =~ /oauth2:/ then
-      require 'uri'
-      url = ::URI.parse u
-      if url.user and url.password then
-        execute :composer, 'config', '--global', "http-basic.#{url.host}", url.user, url.password
+  if composer['repositories']
+    composer['repositories'].collect { |e| e['url'] }.each do |u|
+      if u =~ /oauth2:/ then
+        require 'uri'
+        url = ::URI.parse u
+        if url.user and url.password then
+          execute :composer, 'config', '--global', "http-basic.#{url.host}", url.user, url.password
+        end
       end
     end
   end
@@ -230,7 +232,7 @@ namespace :drupal do
 end
 # rubocop:enable Metrics/BlockLength
 
-# after 'deploy:updating', 'drupal:set_paths'
+after 'deploy:updating', 'drupal:set_paths'
 # before 'deploy:updated', 'drupal:site:offline'
 after 'deploy:updated', 'composer:install'
 # before 'deploy:updated', 'drupal:site:backup'
